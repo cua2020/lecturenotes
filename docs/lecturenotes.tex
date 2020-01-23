@@ -30,6 +30,46 @@
 \urlstyle{same}  % don't use monospace font for urls
 \usepackage{natbib}
 \bibliographystyle{apalike}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs}
 \usepackage{graphicx}
 % grffile has become a legacy package: https://ctan.org/pkg/grffile
@@ -183,11 +223,11 @@ We will use R, RStudio and a series of packages (most of them compatible with th
   \begin{itemize}
   \tightlist
   \item
-    \href{https://peerj.com/preprints/3159/}{Excuse me, do you have a moment to talk about version control?} \textbf{(done)}
+    \href{https://peerj.com/preprints/3159/}{Excuse me, do you have a moment to talk about version control?}
   \item
-    \href{https://happygitwithr.com}{Happy Git with R} (Chapter 1-15) \textbf{(done)}
+    \href{https://happygitwithr.com}{Happy Git with R} (Chapter 1-15)
   \item
-    \href{https://journals.sagepub.com/doi/abs/10.1177/0309132515599625}{Reproducible research and quantitative geography} \textbf{(done)}
+    \href{https://journals.sagepub.com/doi/abs/10.1177/0309132515599625}{Reproducible research and quantitative geography}
   \item
     \href{https://git-scm.com/book/en/v2}{Pro Git} (optional)
   \end{itemize}
@@ -209,7 +249,7 @@ We will use R, RStudio and a series of packages (most of them compatible with th
   \begin{itemize}
   \tightlist
   \item
-    \href{https://happygitwithr.com}{Happy Git with R} (Chapter 20-23) \textbf{(done)}
+    \href{https://happygitwithr.com}{Happy Git with R} (Chapter 20-23)
   \item
     \href{https://socviz.co/makeplot.html\#makeplot}{Data Visualization Chapter 3}
   \item
@@ -457,6 +497,173 @@ We will use R, RStudio and a series of packages (most of them compatible with th
 \item
   Final Project Studio
 \end{enumerate}
+
+\hypertarget{week-1}{%
+\chapter{Week 1}\label{week-1}}
+
+\hypertarget{taking-control-of-your-repository}{%
+\section{Taking control of your repository}\label{taking-control-of-your-repository}}
+
+Our key task for this first week is to make ourselves comfortable with using git as a version control system for projects that involve data analysis. Git is a very powerful system -- and many folks even use it to manage other types of projects (e.g.~writing). To keep things simple, we'll focus specifically on how git relates to our workflow with R/Rstudio for now.
+
+We will start by taking possesion of the repository you will use to do your work in the context of this course. It has been set up for you already on github.com and should follow the structure \texttt{02522-cua/yourname}. For example, my repository would reside at \url{https://github.com/02522-cua/atepoorthuis}. Find your repository (here's \href{https://github.com/02522-cua}{a list} of all repos in our course organization) and take note (i.e.~copy it to the clipboard) of its url.
+
+Start a new project in RStudio and choose to start one from version control.
+\includegraphics{images/project_vc.png}
+Choose to start a project from Git and paste your github repository url in. Do make sure you store the repository somewhere sensible within your general folder organization so you can find it again.
+\includegraphics{images/git_clone.png}
+
+Once you click OK, RStudio will create a new directory and will download (this is called `cloning' in git parlance) the contents of your repository into it.
+
+\hypertarget{making-your-first-commit}{%
+\section{Making your first commit}\label{making-your-first-commit}}
+
+Now that your repository has found a place on your computer, let's practice changing some things around and see how these changes will be reflected online. There are a few specific steps involved that you need to understand (also check out \href{http://rogerdudler.github.io/git-guide/}{this decent visual summary}):
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  You make some actual changes. You can modify existing files and save those changes or create entirely new files.
+\item
+  After making changes, git does not actually now about them yet. We tell git about any changes by \texttt{add}ing or \texttt{staging} changed files. This sounds tedious but it is actually very handy when you're experimenting and don't necessarily want your half-baked experiment to be sent to the online repository.
+\item
+  Once you are happy with your changes, you can make a \texttt{commit} of all the staged changes up until that moment. I like to think of this is a milestone. You say: `\emph{these are my changes, please check them in}'. This is also reflected by the fact that every \texttt{commit} is accompanied by a commit message that summarizes those changes. We generally keep these messages short so they're easier to read later.
+\item
+  After commiting, the changes only still exist on our local computer. We can finally \texttt{push} our changes up to Github.com.
+\end{enumerate}
+
+Time for practice. Open the README.md file in the `root' of your project. The current description is a bit generic so let's personalize. I changed mine to:
+
+\begin{verbatim}
+# Computational Urban Analysis Repository of Ate Poorthuis
+
+This repo will hold all my lab work and assignments.
+\end{verbatim}
+
+Save your change and go to the \texttt{Git} pane (usually in the right-hand side of your RStudio window). You should see your README.md file show up there now. If it does, click the \texttt{Diff} or \texttt{Commit} button. This will open up another window, in which we can do all of our next steps.
+
+\begin{itemize}
+\tightlist
+\item
+  First we need to \texttt{stage} our changes. Hit the tick-box in front of README.md. (If the \texttt{.proj} file shows up, we can stage that too)
+\item
+  Next we need to \texttt{commit} our staged changes. Write a short commit message describing your change and hit the Commit button.
+\end{itemize}
+
+\includegraphics{images/commit.png}
+
+Now we have commited our changes \emph{locally} but this is not yet reflected on github.com. We can \texttt{push} the state of our repository up to github.com. You will notice a message on the top-left of the git window indicating `Your branch is 1 commit ahead of origin/master'. \texttt{Origin} is git parlance for the online version of our repository. To bring \texttt{origin} back into sync with our local version, just press `Push' and go to your repository on github.com to see the changes. Congratulations you are now a budding git ninja!
+
+\hypertarget{setting-up-our-hdb-data}{%
+\section{Setting up our HDB data}\label{setting-up-our-hdb-data}}
+
+Now that you have properly taken control of your repository, it is time to start setting up our data for subsequent analysis. The task at hand is to analyze HDB resale prices -- we will start next week with univariate statistics (i.e.~analyzing single variables in isolation), after which we will move to multivariate statistics (i.e.~looking at the relation between multiple variables). For now, we are just going to set up shop: read and clean our dataset using a series of \texttt{tidyverse} operations.
+
+Create a new R Notebook and save it with an appropriate name in your \texttt{lab-practice} folder. Use the R Notebook to follow along and experiment with the dataset. Do not just copy the instructions below but type them by hand instead. Also note that it is your responsibility to make sure any of the libraries used below (as recognized from them being loaded with \texttt{library}) are actually installed (with \texttt{install.packages}).
+
+You can find a data of resale transactions going back to 1990 on the \href{https://data.gov.sg/dataset/resale-flat-prices}{data.gov.sg} website. For now, we will just consider the data from 2015-now so you can download this data set directly from \url{https://www.dropbox.com/s/xorwcqe4h7d1u7q/resale-flat-prices-based-on-registration-date-from-jan-2015-onwards.csv?dl=1}.
+
+As we will use this data across several blocks, you should create a \texttt{data/} folder at the root of your project to hold this data.
+
+A short note on the \texttt{here} package. Rmarkdown documents are always executed in the context of your their current directory. Move a document all of the sudden it might not be able to find the files it's using anymore! This is why we use \texttt{here}: it will always point to the root of our project folder.
+
+Once the data is saved, let's read it in.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{sales <{-}}\StringTok{ }\KeywordTok{read\_csv}\NormalTok{(here}\OperatorTok{::}\KeywordTok{here}\NormalTok{(}\StringTok{"data/hdb\_resale\_2015\_onwards.csv"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+Use \texttt{glimpse()} and \texttt{View()} to inspect the resulting tibble. As you'll see the data is relatively clean.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{sales }\OperatorTok{\%>\%}\StringTok{ }\KeywordTok{glimpse}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Observations: 79,100
+## Variables: 11
+## $ month               <chr> "2015-01", "2015-01", "2015-01", "2015-01", "20...
+## $ town                <chr> "ANG MO KIO", "ANG MO KIO", "ANG MO KIO", "ANG ...
+## $ flat_type           <chr> "3 ROOM", "3 ROOM", "3 ROOM", "3 ROOM", "3 ROOM...
+## $ block               <chr> "174", "541", "163", "446", "557", "603", "709"...
+## $ street_name         <chr> "ANG MO KIO AVE 4", "ANG MO KIO AVE 10", "ANG M...
+## $ storey_range        <chr> "07 TO 09", "01 TO 03", "01 TO 03", "01 TO 03",...
+## $ floor_area_sqm      <dbl> 60, 68, 69, 68, 68, 67, 68, 68, 67, 68, 67, 68,...
+## $ flat_model          <chr> "Improved", "New Generation", "New Generation",...
+## $ lease_commence_date <dbl> 1986, 1981, 1980, 1979, 1980, 1980, 1980, 1981,...
+## $ remaining_lease     <dbl> 70, 65, 64, 63, 64, 64, 64, 65, 62, 69, 60, 64,...
+## $ resale_price        <dbl> 255000, 275000, 285000, 290000, 290000, 290000,...
+\end{verbatim}
+
+There are just a few adjustments we need to make.
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{month} should probably be converted to a date
+\item
+  \texttt{flat\_type}, \texttt{storey\_range} and \texttt{flat\_model} are currently \texttt{chr} columns but can better be represented as \texttt{factor} variables as they are categorical variables.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(lubridate)}
+\KeywordTok{library}\NormalTok{(forcats)}
+
+\NormalTok{sales }\OperatorTok{\%>\%}\StringTok{ }
+\StringTok{  }\KeywordTok{mutate}\NormalTok{(}\DataTypeTok{month =} \KeywordTok{ymd}\NormalTok{(month, }\DataTypeTok{truncated =} \DecValTok{1}\NormalTok{),}
+         \DataTypeTok{flat\_type =} \KeywordTok{as\_factor}\NormalTok{(flat\_type),}
+         \DataTypeTok{storey\_range =} \KeywordTok{as\_factor}\NormalTok{(storey\_range),}
+         \DataTypeTok{flat\_model =} \KeywordTok{as\_factor}\NormalTok{(flat\_model))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 79,100 x 11
+##    month      town  flat_type block street_name storey_range floor_area_sqm
+##    <date>     <chr> <fct>     <chr> <chr>       <fct>                 <dbl>
+##  1 2015-01-01 ANG ~ 3 ROOM    174   ANG MO KIO~ 07 TO 09                 60
+##  2 2015-01-01 ANG ~ 3 ROOM    541   ANG MO KIO~ 01 TO 03                 68
+##  3 2015-01-01 ANG ~ 3 ROOM    163   ANG MO KIO~ 01 TO 03                 69
+##  4 2015-01-01 ANG ~ 3 ROOM    446   ANG MO KIO~ 01 TO 03                 68
+##  5 2015-01-01 ANG ~ 3 ROOM    557   ANG MO KIO~ 07 TO 09                 68
+##  6 2015-01-01 ANG ~ 3 ROOM    603   ANG MO KIO~ 07 TO 09                 67
+##  7 2015-01-01 ANG ~ 3 ROOM    709   ANG MO KIO~ 01 TO 03                 68
+##  8 2015-01-01 ANG ~ 3 ROOM    333   ANG MO KIO~ 01 TO 03                 68
+##  9 2015-01-01 ANG ~ 3 ROOM    109   ANG MO KIO~ 01 TO 03                 67
+## 10 2015-01-01 ANG ~ 3 ROOM    564   ANG MO KIO~ 13 TO 15                 68
+## # ... with 79,090 more rows, and 4 more variables: flat_model <fct>,
+## #   lease_commence_date <dbl>, remaining_lease <dbl>, resale_price <dbl>
+\end{verbatim}
+
+Now it is time to get our cheatsheets out. Last term we gained experience with a suite of \texttt{tidyverse} staples to manipulate tables in different ways. The most important of these are probably \texttt{filter}, \texttt{arrange}, \texttt{group\_by}, and \texttt{summarize}.
+
+Try to put these to practice to answer the following questions:
+
+\begin{itemize}
+\tightlist
+\item
+  What is the earlier lease commencement date and where are these flats located?
+\item
+  What are the largest HDB flats in Singapore? How much did they sell for?
+\item
+  What is the most expensive flat in Punggol?
+\item
+  Which town has, on average, the largest flats (by floor area)?
+\item
+  Which town has, on average, the cheapest flats per square meter?
+\end{itemize}
+
+Answer each of these questions in a separate code chunk. When you are finished, save your RMarkdown document. You're now ready to make your first `real' commit.
+
+\includegraphics{images/final_commit.png}
+
+Walk through these steps -- \texttt{stage} your changes, \texttt{commit} the staged changes (with an appropriate commit message), and finally \texttt{push} your local commits up to the repository on github.com.
 
 \bibliography{book.bib,packages.bib}
 
