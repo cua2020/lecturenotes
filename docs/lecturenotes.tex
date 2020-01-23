@@ -23,53 +23,13 @@
 }{}
 \usepackage{hyperref}
 \hypersetup{unicode=true,
-            pdftitle={A Minimal Book Example},
-            pdfauthor={Yihui Xie},
+            pdftitle={02.522: Urban Data \& Methods I: Computational Urban Analysis},
+            pdfauthor={Ate Poorthuis},
             pdfborder={0 0 0},
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
 \usepackage{natbib}
 \bibliographystyle{apalike}
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{248,248,248}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\BuiltInTok}[1]{#1}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
-\newcommand{\ExtensionTok}[1]{#1}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\ImportTok}[1]{#1}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\NormalTok}[1]{#1}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs}
 \usepackage{graphicx}
 % grffile has become a legacy package: https://ctan.org/pkg/grffile
@@ -120,16 +80,15 @@
 
 \setlength{\droptitle}{-2em}
 
-  \title{A Minimal Book Example}
+  \title{02.522: Urban Data \& Methods I: Computational Urban Analysis}
     \pretitle{\vspace{\droptitle}\centering\huge}
   \posttitle{\par}
-    \author{Yihui Xie}
+    \author{Ate Poorthuis}
     \preauthor{\centering\large\emph}
   \postauthor{\par}
-      \predate{\centering\large\emph}
-  \postdate{\par}
-    \date{2020-01-23}
-
+    \date{}
+    \predate{}\postdate{}
+  
 \usepackage{booktabs}
 
 \begin{document}
@@ -139,24 +98,365 @@
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
-\hypertarget{prerequisites}{%
-\chapter{Prerequisites}\label{prerequisites}}
+\hypertarget{syllabus}{%
+\chapter{Syllabus}\label{syllabus}}
 
-This is a \emph{sample} book written in \textbf{Markdown}. You can use anything that Pandoc's Markdown supports, e.g., a math equation \(a^2 + b^2 = c^2\).
+\hypertarget{class-schedule}{%
+\section{Class Schedule}\label{class-schedule}}
 
-The \textbf{bookdown} package can be installed from CRAN or Github:
+\textbf{January Term 2020}\\
+\textbf{Tue 12.30-2pm} Think Thank 7 (1.409)\\
+\textbf{Thu 11.00-12.30pm} Think Thank 17 (2.202)\\
+Office Hours: By appointment
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{install.packages}\NormalTok{(}\StringTok{"bookdown"}\NormalTok{)}
-\CommentTok{\# or the development version}
-\CommentTok{\# devtools::install\_github("rstudio/bookdown")}
-\end{Highlighting}
-\end{Shaded}
+\hypertarget{course-description}{%
+\section{Course Description}\label{course-description}}
 
-Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading \texttt{\#}.
+This course focuses on quantitative and computational approaches to urban analytics and data science. It exposes students to new ways of collecting large datasets (``big data'') and innovative methods of analysing such datasets. It draws on both more conventional methods such as (spatial) statistics, as well as how to appropriately use methods from data science and machine learning within an urban context.
 
-To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): \url{https://yihui.org/tinytex/}.
+\hypertarget{format}{%
+\section{Format}\label{format}}
+
+The course is structured around two 1.5 hour classes per week that integrate lecture, discussion and in-class activities and exercises in an interactive manner. The class is further structured around 6 blocks (each lasting two weeks).
+
+\hypertarget{expectations}{%
+\section{Expectations}\label{expectations}}
+
+Students are expected to be present and actively participate in each class, as well as on the class online forum (Slack). Before coming to class, you will have read the assigned readings and you are coming to class prepared to participate in discussion and exercises.
+
+You are also expected to produce your own work, whether individually or in groups. Do not copy work from the internet or other published sources without proper citations. This is plagiarism and if a student is found to be doing so, he or she will be subject to disciplinary measures including potentially failing the course.
+
+\hypertarget{assessment}{%
+\section{Assessment}\label{assessment}}
+
+There will be a variety of assessments throughout the semester. Emphasis is on your performance overall, with relatively low weight placed on individual items. Continued participation throughout the semester will enable you to do well in this course.
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+Assessment Items & Percentage & Period\tabularnewline
+\midrule
+\endhead
+Class Participation & 15\% & Throughout term\tabularnewline
+Assignments (six) & 45\% & Throughout term\tabularnewline
+Final Project & 40\% & Week 14\tabularnewline
+\bottomrule
+\end{longtable}
+
+\hypertarget{assignments}{%
+\subsection{Assignments}\label{assignments}}
+
+Each block consists of a series of exercises that culminate in an assigment/report that will be due before the start of the next block (Monday 23.59).
+
+\hypertarget{final-project}{%
+\subsection{Final Project}\label{final-project}}
+
+For the final project, you will develop conduct a computational analysis of a topic and dataset of your own choice. This is an opportunity to explore (an aspect of) your final term project in more detail -- or take a deep-dive in a topic or dataset that you're interested in. You can choose to use already existing datasets, or collect your own but you must use one or more computational methods to help answer your reseach question. In Week 6, you will hand in a research proposal of a maximum of 1000 words. It should discuss your motivation for the project; its objectives and research question; data requirements (does the data already exist? where do you get it from? does it need a lot of post-processing); and the methods you plan on utilizing. The remainder of the term is spent on collecting and analyzing data. A prototype of your analysis is due at the end of Week 13 and the final version at the end of Week 14. You are required to hand in both the code, a written paper and (where appropriate) visualizations as part of your Github repository. You can do this in a single form factor through one or more RMarkdown documents.
+
+\hypertarget{deadlines}{%
+\section{Deadlines}\label{deadlines}}
+
+Deadlines are as noted in the course syllabus or on the specific assignment. If something is due on a specific date, you have until midnight on that day to submit the assignment.
+
+\hypertarget{software}{%
+\section{Software}\label{software}}
+
+We will use R, RStudio and a series of packages (most of them compatible with the \href{https://www.tidyverse.org/}{Tidyverse}). All software used in the course is open-source and freely available.
+
+\hypertarget{detailed-outline}{%
+\section{Detailed Outline}\label{detailed-outline}}
+
+\hypertarget{block-1-analysis-of-hdb-resale-prices-i}{%
+\subsection{Block 1: Analysis of HDB Resale Prices I}\label{block-1-analysis-of-hdb-resale-prices-i}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Reproducible Science \& Project Management (+ re-view of tidyverse basics)
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Reading:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \href{https://peerj.com/preprints/3159/}{Excuse me, do you have a moment to talk about version control?} \textbf{(done)}
+  \item
+    \href{https://happygitwithr.com}{Happy Git with R} (Chapter 1-15) \textbf{(done)}
+  \item
+    \href{https://journals.sagepub.com/doi/abs/10.1177/0309132515599625}{Reproducible research and quantitative geography} \textbf{(done)}
+  \item
+    \href{https://git-scm.com/book/en/v2}{Pro Git} (optional)
+  \end{itemize}
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Exploratory Data Analysis (Univariate Statistics \& Visualization)
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Reading:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \href{https://happygitwithr.com}{Happy Git with R} (Chapter 20-23) \textbf{(done)}
+  \item
+    \href{https://socviz.co/makeplot.html\#makeplot}{Data Visualization Chapter 3}
+  \item
+    Burt et al., \emph{Elementary Statistics for Geographers}, (Chapter 3)
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{block-2-analysis-of-hdb-resale-prices-ii}{%
+\subsection{Block 2: Analysis of HDB Resale Prices II}\label{block-2-analysis-of-hdb-resale-prices-ii}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Sampling, Bootstrapping \& Confidence Intervals
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Reading:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Burt et al., \emph{Elementary Statistics for Geographers}, (Chapter 6)
+  \item
+    \href{https://moderndive.com/8-sampling.html}{Modern Dive Chapter 8}
+  \item
+    \href{https://moderndive.com/9-confidence-intervals.html}{Modern Dive Chapter 9}
+  \end{itemize}
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Correlation \& Linear Regression
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Reading:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Burt et al., \emph{Elementary Statistics for Geographers}, (Chapter 4)
+  \item
+    \href{https://moderndive.com/6-regression.html}{Modern Dive Chapter 6}
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{block-3-geodemographics-of-sg-neighborhoods-i}{%
+\subsection{Block 3: Geodemographics of SG Neighborhoods I}\label{block-3-geodemographics-of-sg-neighborhoods-i}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Dimension Reduction (MDS/PCA)
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Reading:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Gatrell, Anthony C. ``Multidimensional Scaling.'' In \emph{Quantitative Geography}. Routledge \& Kegan Paul, 1981.
+  \item
+    \href{http://setosa.io/ev/principal-component-analysis/}{Principal Component Analysis, Explained Visualy}
+  \item
+    \href{http://ibis.geog.ubc.ca/~ewyly/teaching/606_pca.pdf}{Wyly's notes on PCA}
+  \end{itemize}
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  Dimension Reduction (T-SNE)
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Reading:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \href{https://www.youtube.com/watch?v=RJVL80Gg3lA\&list=UUtXKDgv1AVoG88PLl8nGXmw}{Van der Maaten's Google Tech Talk}
+  \end{itemize}
+\end{itemize}
+
+\textbf{7. Break}
+
+\hypertarget{block-4-geodemographic-of-sg-neighborhoods-ii}{%
+\subsection{Block 4: Geodemographic of SG Neighborhoods II}\label{block-4-geodemographic-of-sg-neighborhoods-ii}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{7}
+\tightlist
+\item
+  Clustering (non-spatial)
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Reading:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Fortunato, F. \href{https://arxiv.org/abs/0906.0612}{Community Detection in Graphs}. Specifically section 4a-c.
+  \item
+    Jain, A. \href{https://doi.org/10.1016/j.patrec.2009.09.011}{Data clustering: 50 years beyond K-means}
+  \item
+    Ester et al.~\href{https://www.aaai.org/Papers/KDD/1996/KDD96-037.pdf}{A Density-Based Algorithm for Discovering Clusters}
+  \end{itemize}
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{8}
+\tightlist
+\item
+  Clustering (spatial, including refresher on spatial data structures)
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Reading:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Guo, D. \href{https://doi.org/10.1080/13658810701674970}{Regionalization with dynamically constrained agglomerative clustering and partitioning (REDCAP)}
+  \item
+    Poorthuis, A. \href{https://doi.org/10.1111/gean.12143}{How to draw a neighborhood}
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{block-5-spatial-statistics}{%
+\subsection{Block 5: Spatial Statistics}\label{block-5-spatial-statistics}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{9}
+\tightlist
+\item
+  Spatial Statistics I (Spatial Autocorrelation)
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Reading:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    TBA
+  \end{itemize}
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{10}
+\tightlist
+\item
+  Spatial Statistics II (Spatial Regression Modeling)
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Reading:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    TBA
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{block-6-classification}{%
+\subsection{Block 6: Classification}\label{block-6-classification}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{11}
+\tightlist
+\item
+  Classification (logistic regression \& SVM)
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Reading:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    TBA
+  \end{itemize}
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{12}
+\tightlist
+\item
+  Classification (overflow, possible excursion to deep learning)
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Reading:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    TBA
+  \end{itemize}
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{13}
+\tightlist
+\item
+  Final Project Studio
+\end{enumerate}
 
 \bibliography{book.bib,packages.bib}
 

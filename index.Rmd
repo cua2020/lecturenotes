@@ -1,5 +1,5 @@
 --- 
-title: "02.521: Urban Data & Methods I: Computational Urban Analysis"
+title: "02.522: Urban Data & Methods I: Computational Urban Analysis"
 author: "Ate Poorthuis"
 site: bookdown::bookdown_site
 documentclass: book
